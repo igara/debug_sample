@@ -1,0 +1,21 @@
+version: '3'
+
+services:
+  rails:
+    build:
+      context: ./rails
+      dockerfile: Dockerfile
+    command: bundle exec rails s -p 3000 -b '0.0.0.0'
+    ports:
+      - 3000:3000
+    volumes:
+      - ./rails:/rails:cached
+    networks:
+      - frontend
+      - backend
+
+networks:
+  frontend:
+    driver: 'bridge'
+  backend:
+    driver: 'bridge'

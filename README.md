@@ -24,9 +24,38 @@ Things you may want to cover:
 * ...
 
 
-## debug
+## run rails
+
+### local machine
 
 ```
-$ bundle install --path vendor/bundle
-$ bundle exec rdebug-ide --host 127.0.0.1 --port 1234 --dispatcher-port 26162 -- bin/rails s
+$ cd rails
+$ bundle e rails s
 ```
+
+### docker
+
+```
+$ docker-compose up -d
+```
+
+## vscode debug
+
+
+### run local machine
+
+```
+$ cd rails
+$ bundle install --path vendor/bundle
+$ bundle exec rdebug-ide --host 0.0.0.0 --port 1234 --dispatcher-port 26162 -- bin/rails s
+```
+
+select Local - Listen for rdebug-ide
+
+### run docker
+
+```
+$ docker-compose -f docker-compose.debug.yml up
+```
+
+select Local Docker - Listen for rdebug-ide

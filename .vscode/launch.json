@@ -5,13 +5,23 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Listen for rdebug-ide",
+            "name": "Local - Listen for rdebug-ide",
             "type": "Ruby",
             "request": "attach",
-            "cwd": "${workspaceRoot}",
+            "cwd": "${workspaceRoot}/rails",
             "remoteHost": "0.0.0.0",
             "remotePort": "1234",
-            "remoteWorkspaceRoot": "${workspaceRoot}",
+            "remoteWorkspaceRoot": "${workspaceRoot}/rails",
+            "useBundler": true
+        },
+        {
+            "name": "Local  Docker - Listen for rdebug-ide",
+            "type": "Ruby",
+            "request": "attach",
+            "cwd": "${workspaceRoot}/rails",
+            "remoteHost": "0.0.0.0",
+            "remotePort": "1234",
+            "remoteWorkspaceRoot": "/rails",
             "useBundler": true
         }
     ]
