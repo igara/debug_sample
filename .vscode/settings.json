@@ -1,3 +1,3 @@
 {
-  "ruby.intellisense": true
+  "ruby.intellisense": "rubyLocate"
 }
